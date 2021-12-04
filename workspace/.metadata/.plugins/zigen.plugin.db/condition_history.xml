@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17-beta" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST.girls.beauty</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST</string>
+    </void>
+    <void property="schema">
+     <string>girls</string>
+    </void>
+    <void property="table">
+     <string>beauty</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST.girls.admin</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST</string>
+    </void>
+    <void property="schema">
+     <string>girls</string>
+    </void>
+    <void property="table">
+     <string>admin</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST.girls.boys</string>
+   <object class="zigen.plugin.db.core.Condition">
+    <void property="conditions">
+     <object class="java.util.ArrayList"/>
+    </void>
+    <void property="connectionUrl">
+     <string>jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&amp;serverTimezone=JST</string>
+    </void>
+    <void property="schema">
+     <string>girls</string>
+    </void>
+    <void property="table">
+     <string>boys</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

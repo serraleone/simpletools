@@ -1,0 +1,43 @@
+table {
+	border: 0;
+}
+
+table.result {
+	border: 0;
+	table-layout:fixed; 
+	width : 900;
+}
+
+th{
+	text-align: center;
+}
+
+td{
+	text-align: left;
+	word-break : break-all;
+}
+
+h1 {
+	color: blue;
+}
+
+td.error {
+	color: red;
+}
+
+td.path{
+	text-align: left;
+	width: "300" ;
+	word-break : break-all;
+}
+
+td.step{
+	text-align: center;
+	width: "200" ;
+	word-break : break-all;
+}
+
+p.error {
+	color: red;
+	font-size:20px
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form name="register" action="" method="post">
+   
+    <table align="center" width="600" border="0" cellspacing="0" cellpadding="5">
+        
+        <caption><h2>塞拉利昂星球移民登陆</h2></caption>
+       
+        <!-- 1.性别  -->
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" name="sex" />男
+                &nbsp;
+                <input type="radio" name="sex" />女
+            </td>
+        </tr>
+        
+        <!-- 2.生日 -->
+        <tr>
+            <td>出身年月：</td>
+            <td>
+                <select name="year">
+                    <option value="--请选择年份--">--请选择年份--</option>
+                    <option>1995年</option>
+                    <option>1996年</option>
+                    <option>1997年</option>
+                    <option>1998年</option>
+                    <option>1999年</option>
+                    <option>2000年</option>
+                    <option>2001年</option>
+                    <option>2002年</option>
+                    <option>2003年</option>
+                    <option>2004年</option>
+                    <option>2005年</option>
+                    <option>2006年</option>
+                    <option>2007年</option>
+                    <option>2008年</option>
+                    <option>2009年</option>
+                    <option>2010年</option>
+                </select>
+
+                <select name="month">
+                    <option value="--请选择月份--">--请选择月份--</option>
+                    <option>1月</option>
+                    <option>2月</option>
+                    <option>3月</option>
+                    <option>4月</option>
+                    <option>5月</option>
+                    <option>6月</option>
+                    <option>7月</option>
+                    <option>8月</option>
+                    <option>9月</option>
+                    <option>10月</option>
+                    <option>11月</option>
+                    <option>12月</option>
+                </select>
+
+                <select name="day">
+                    <option value="--请选择日--">--请选择日--</option>
+                    <option>1日</option>
+                    <option>2日</option>
+                    <option>3日</option>
+                    <option>4日</option>
+                    <option>5日</option>
+                    <option>6日</option>
+                    <option>7日</option>
+                    <option>8日</option>
+                    <option>9日</option>
+                    <option>10日</option>
+                    <option>11日</option>
+                    <option>12日</option>
+                    <option>13日</option>
+                    <option>14日</option>
+                    <option>15日</option>
+                    <option>16日</option>
+                    <option>17日</option>
+                    <option>18日</option>
+                    <option>19日</option>
+                    <option>20日</option>
+                    <option>21日</option>
+                    <option>22日</option>
+                    <option>23日</option>
+                    <option>24日</option>
+                    <option>25日</option>
+                    <option>26日</option>
+                    <option>27日</option>
+                    <option>28日</option>
+                    <option>29日</option>
+                    <option>30日</option>
+                    <option>31日</option>
+                </select>
+            </td>
+        </tr>
+        
+        <!-- 3.所在地 -->
+        <tr>
+            <td>所在地：</td>
+            <td>
+                <select name="province">
+                    <option value="--请选择省份--">--请选择省份--</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>广东</option>
+                    <option>四川</option>
+                    <option>浙江</option>
+                    <option>湖北</option>
+                    <option>台湾</option>
+                    <option>香港</option>
+                    <option>澳门</option>
+                </select>
+
+                <select name="city">
+                    <option value="--请选择市--">--请选择市--</option>
+                </select>
+            </td>
+        </tr>
+        
+        <!-- 4.婚姻状况 -->
+        <tr>
+            <td>婚姻状况：</td>
+            <td>
+                <input type="radio" name="marriage" />已婚 &nbsp;
+                <input type="radio" name="marriage" />未婚 &nbsp;
+                <input type="radio" name="marriage" />离婚 
+            </td>
+        </tr>
+        
+        <!-- 5.学历 -->
+        <tr>
+            <td>学历：</td>
+            <td>
+                <input type="radio" name="education" />高中及以下 &nbsp;
+                <input type="radio" name="education" />专科 &nbsp;
+                <input type="radio" name="education" />大学本科 &nbsp;
+                <input type="radio" name="education" />研究生及以上
+            </td>
+        </tr>
+
+        <!-- 6.月薪 -->
+        <tr>
+            <td>月薪(元)：</td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+
+        <!-- 7.手机号 -->
+        <tr>
+            <td>手机号：</td>
+            <td>
+                +<input type="text" maxlength="2" value="86" size=1 />-
+                <input type="text" maxlength="4" size=4 />-
+                <input type="text" maxlength="4" size=4 />-
+                <input type="text" maxlength="4" size=4 />
+            </td> 
+        </tr>
+
+        <!-- 8.昵称 -->
+        <tr>
+            <td>昵称：</td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+
+        <!-- 9.喜欢的类型 -->
+        <tr>
+            <td>喜欢的类型(多选)：</td>
+            <td>
+                <input type="checkbox" name="love"/>可爱型
+                <input type="checkbox" name="love"/>清纯型
+                <input type="checkbox" name="love"/>闷骚型
+                <input type="checkbox" name="love"/>老练型
+                <input type="checkbox" name="love"/>和蔼型
+                <input type="checkbox" name="love"/>其他
+            </td>
+        </tr>
+
+        <!-- 10.自我介绍 -->
+        <tr>
+            <td>自我介绍：</td>
+            <td>
+                <textarea name="introduction" cols="65" rows="5"></textarea>
+            </td>
+        </tr>
+
+        <!-- 11.立即注册 -->
+        <tr>
+            <td></td>
+            <td>
+                <input type="image" src="picture/btn.jpg" title="犹豫就会败北" />
+            </td>
+        </tr>
+
+        <!-- 12.同意条款 -->
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" checked="checked"/>我知晓并同意该条款
+            </td>
+        </tr>
+
+        <!-- 13.我是会员 -->
+        <tr>
+            <td></td>
+            <td>
+               <a href="#"><u><strong>我是会员，立即登录</strong></u></a>
+            </td>
+        </tr>
+
+        <!-- 14.我承诺 -->
+        <tr>
+            <td></td>
+            <td>
+                <h3><strong>我承诺</strong></h3>
+                <ul>
+                    <li>年满18，单身</li>
+                    <li>抱着严谨的态度</li>
+                    <li>探究心理科学</li>
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+</body>
+</html>

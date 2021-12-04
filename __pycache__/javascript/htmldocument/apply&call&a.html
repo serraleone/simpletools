@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+         *call()和apply()是函数对象方法
+         *作用是调用函数
+         *（）里的第一个参数是对象
+         *能实现的功能是，this的对象将变成（）的第一个参数对象
+         *call(obj,1,2)/ apply(obj,[1,2])
+         */
+        var name = "xml"
+        function fun(a, b){
+            console.log("a = " + this.name);
+            console.log(a);
+            console.log(b);
+            /*
+             *arguments，类数组对象
+             *function使用时，系统默认传this，和arguments参数
+             *实参都会被保存在arguments中，感觉就是java的args[]变量
+             */
+            console.log(arguments.length);
+            console.log(arguments[0]);
+            console.log(arguments.callee);
+            console.log("________________________________________");
+        }
+
+        function createObj(id){
+            this.id = id;
+        }
+
+        var obj1 = new createObj(1);
+        obj1.name = "aaa";
+        var obj2 = new createObj(2);
+        obj2.name = "bbb";
+
+        console.log(fun(1,2));
+        console.log(fun.call(obj1, 111, 222));
+        console.log(fun.apply(obj2, [333, 444]));
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/StepCount.css}" rel="stylesheet">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>検索結果画面</title>
+	</head>
+	<body>
+		<div align="center">
+			<h1>ステップ数カウントツール</h1>
+			<h2>-------------------------------------------------------------</h2>
+			<br />
+			
+				<table class="result" border="1"> 
+					<tr>
+						<th width="200">フォルダ名</th>
+						<th width="300">フォルダパス</th>
+						<th width="200">物理的ステップ数</th>
+						<th width="200">論理的ステップ数</th>
+					</tr>
+					<tr th:each="fileInfo : ${fileList}">
+						<td width="200" th:text="${fileInfo.fileName}"></td>
+						<td class="path" th:text="${fileInfo.url}"></td>
+						<td class="step" th:text="${fileInfo.phyStep}"></td>
+						<td class="step" th:text="${fileInfo.logStep}"></td>
+					</tr>
+				</table>
+				<table class="result" border="0">
+					<tr>
+						<th width="200">合計</th>
+						<th width="300"></th>
+						<th width="200" th:text="${calList[0]}"></th>
+						<th width="200" th:text="${calList[1]}"></th>
+					<tr>
+				</table>
+				<br>
+				<br>
+				<table>
+					<tr>
+						<td>
+							<a th:href="@{/select}">[戻る]</a>
+						</td>
+						<td>
+						    <a th:href="@{/selectResultOutput}">[ファイルへの出力]</a>
+						</td>
+					</tr>
+					<tr>
+					    <td></td>
+					    <td>
+					    	<th:block th:if="${outputFlag eq '1'}">
+					    	出力成功！
+					    	</th:block>
+					    </td>
+					</tr>
+				</table>
+				
+			
+		</div>
+	</body>
+	
+</html>

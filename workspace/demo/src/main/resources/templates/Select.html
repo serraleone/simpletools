@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/StepCount.css}" rel="stylesheet">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>検索画面</title>
+	</head>
+	<body>
+		<div align="center">
+			<h1>ステップ数カウントツール</h1>
+			<h2>-------------------------------------------------------------</h2>
+			<br />
+			
+			<form th:object="${folderPathForm}" method="post" 
+				action="#" th:action="@{/selectResult}">
+				<table> 
+					<tr>
+						<th width="300" colspan="2">フォルダの絶対パスを入力してください</th>
+					</tr>
+					<tr>
+						<td width="220"><input style="width:220px;" th:field="*{url}" 
+							onFocus="this.value=''" value="例：C:/Users"></td>
+						<td width="80"><button type="submit">検索</button></td>
+					</tr>
+					<tr>
+						<td class="error" colspan="2" th:if="${#fields.hasErrors('url')}"
+							th:errors="*{url}">message</td>
+					</tr>
+				</table>
+				<br>
+				
+			</form>
+			<br>
+			<br>
+		 	<p class="error" th:text="${message}">error message</p>	
+			
+		</div>
+	</body>
+	
+</html>

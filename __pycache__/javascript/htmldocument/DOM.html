@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- dom事件的参考网站：https://developer.mozilla.org/zh-CN/docs/Web/Events -->
+    <!-- 如果要把script写在最开始，必须要用window.onload功能,效果是页面加载完才执行script代码-->
+    <script type="text/javascript">
+        window.onload = function(){
+            var btn = document.getElementById("btn");
+            var i = 0;
+            var arr = new Array();
+            arr.push("讨厌~~你再点下试试");
+            arr.push("别点了！");
+            arr.push("痛");
+            arr.push("死机了");
+            
+            btn.onclick = function(){
+                alert(arr[i]);
+                i++;
+                if(i==4){
+                    window.close();
+                }
+            };
+        };
+
+    </script>
+</head>
+<body>
+    <div style="position: absolute; top: 200px;left: 45%;">
+        <button id="btn">我是一个button</button>
+        <ul id="city">
+            <li>喜欢的城市</li>
+                <ol>
+                    <li class="SH">上海</li>
+                    <li class="BJ">北京</li>
+                    <li class="GZ">广州</li>
+                    <li class="SZ">深圳</li>
+                </ol>
+        </ul>
+     <script type="text/javascript">
+        var cities = document.getElementById("city");
+        var cities1 = cities.getElementsByClassName("SH");
+        (function(){
+        for(var i=0;i<cities1.length;i++){
+                console.log(cities1[i]);
+        }
+        })();
+    </script>   
+
+    </div>
+    
+</body>
+</html>

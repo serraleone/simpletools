@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "__pycache__/stepcounter/service",
+        "__pycache__/java",
+        "__pycache__/stepcounter/entity"
+    ]
+}

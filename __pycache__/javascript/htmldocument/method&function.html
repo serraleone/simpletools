@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method&function</title>
+</head>
+<body>
+    <div>
+        <script type="text/javascript">
+            //1.立即执行函数
+            (function(){
+                alert("只是一个立即执行函数");
+            })();
+
+            //2.普通函数
+            function f1(a){
+                document.write("<p>这是一个普通函数f1</p>");
+                a++
+                return a;
+            }
+            var b = 10;
+            b = f1(b);
+
+            //3. 对象属性名也可以是函数,这个也叫方法
+            var obj = new Object();
+            obj.name = "wpf";
+            obj.gender = "male";
+            obj.method = function(b){
+                console.log("这是一个方法");
+                b++;
+            }
+
+            //4.调用method
+            obj.method(b);
+            document.write("<p>"+b+"</p>");
+
+            //5.遍历对象
+            for(var item in obj){
+                console.log(item);
+                //*这个语法就他妈离谱，找对象值
+                console.log(obj[item]);
+            }
+
+        </script>
+    </div>
+</body>
+</html>

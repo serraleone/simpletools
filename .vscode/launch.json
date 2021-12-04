@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch test2_1",
+            "request": "launch",
+            "mainClass": "test2.test2_1",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch test2",
+            "request": "launch",
+            "mainClass": "test2.test2",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "test2.Main",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch findarrindex",
+            "request": "launch",
+            "mainClass": "findarrindex",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch DAY",
+            "request": "launch",
+            "mainClass": "DAY",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch ODD_OR_EVEN",
+            "request": "launch",
+            "mainClass": "ODD_OR_EVEN",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch RANDOM",
+            "request": "launch",
+            "mainClass": "RANDOM",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch SANGEHESHANG",
+            "request": "launch",
+            "mainClass": "SANGEHESHANG",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch SHUZUBIANLI",
+            "request": "launch",
+            "mainClass": "SHUZUBIANLI",
+            "projectName": "new_41838adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch qiuoushuhe",
+            "request": "launch",
+            "mainClass": "qiuoushuhe",
+            "projectName": "new_41838adf"
+        }
+    ]
+}
