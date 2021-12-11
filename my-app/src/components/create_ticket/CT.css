@@ -1,0 +1,10 @@
+
+.inputTable{
+  border: 0px;
+  table-layout: fixed;
+}
+
+th,td{
+  word-break: break-word;
+  width: 200px;
+}
