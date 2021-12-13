@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Fragment } from "react";
-import "./CT.css";
+import { Link } from "react-router-dom";
+import "../../Regist.css";
 
 
-export default class CreateTicket extends React.Component< any, any >{
+export default class Regist extends React.Component< any, any >{
 
     public genderArr = ["男","女"];
     public titleArr = ["--------","综合职","专门职"];
@@ -24,7 +25,7 @@ export default class CreateTicket extends React.Component< any, any >{
         this.handleInputTask = this.handleInputTask.bind(this);
         this.handleAddTask = this.handleAddTask.bind(this);
         this.handleSubmit= this.handleSubmit.bind(this);
-
+        this.handleDelTask = this.handleDelTask.bind(this);
     }
 
     public handleInput(e: any){
@@ -71,11 +72,52 @@ export default class CreateTicket extends React.Component< any, any >{
 
     }
 
-    public handleSubmit(){
-        console.table(this.state);
+    public handleDelTask(){
+        const checkedArr = this.state.task;
+        let arr = [...this.state.taskArr];
+        
+        if(checkedArr.length <= 0){
+            alert("请选择任务！");
+            return;          
+        }else{
+            for(let i=0;i<checkedArr.length;i++){           
+                arr.splice(arr.indexOf(checkedArr[i]),1)
+            }
+            this.setState(
+                {
+                    taskArr : arr,
+                    task : []
+                }
+            )
+        }
+
     }
 
+    
+    public handleSubmit(e:any){
+        console.table(this.state);
+        e.preventDefault();
+
+        const data = { 
+            name : this.state.name,
+            age :  this.state.age,
+            gender : this.state.gender,
+            title : this.state.title,
+            task : this.state.task
+         };
+
+        var path = {
+            pathname:'/Profile',
+            state:data,
+        }
+
+        this.props.history.push(path);
+    }
+    
+    
+
     public render(){
+        
         return(
             <Fragment>
                 <form className="inputForm" onSubmit={this.handleSubmit}>
@@ -158,14 +200,34 @@ export default class CreateTicket extends React.Component< any, any >{
                                     <button type="button" onClick={ this.handleAddTask }>添加</button>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>删除任务:</td>
+                                <td> 
+                                    <button type="button" onClick={ this.handleDelTask }>勾选任务后删除</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     { /*onSubmit和onClick的切换*/ }
-                    
-                    <button type="button" onClick={ this.handleSubmit }>提交</button>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                        <button type="submit">提交</button>
+                                </td>
+                                <td>
+                                    <Link to="/">
+                                        <button type="button">返回主页</button>
+                                    </Link>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                    
                 </form>
-            </Fragment>
-            
+                <br />
+                <br />
+        
+            </Fragment>           
         )
     }
 }
